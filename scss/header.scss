@@ -1,96 +1,114 @@
+@import 'variables';
+@import 'mixins'; 
+
 header {
-    height: 710px;
-    padding: 135px 148px;
-    background:url(../images/bg-1.png);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 1;
-  
-    .left{
-      max-width: 655px;
-      img {
-        width: 245px;
-      }
-      h1 {
-        font-size: 36px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      hr {
-        width: 75px;
-        border: 1px solid white;
-        margin-bottom: 30px;
-      }
-      p {
-        font-size: 16px;
-        margin-bottom: 30px;
-      }
-      button {
-        width: 135px;
-        height: 42px;
-        padding: 10px;
-        border: 2px solid white;
-        background: transparent;
-        color: white;
-        font-family: montserrat;
-      }
-      button:hover {
-        cursor: $pointer;
-      }
+  height: 45rem;
+  padding: 8rem;
+  background: url(../images/bg-1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 1;
+
+  .left {
+    max-width: 40rem;
+
+    img {
+      max-width: 15rem;
+      margin-top: 5rem;
     }
-    
-    .form{
-      width: 360px;
-      height: 425px;
-      padding: 17px 50px;
-      background: linear-gradient(to bottom, #F5F5F5, #F5F5F5 57px, white 57px, white 367px, #41D395 57px);
-      color: #1C1C1C;
-      border-radius: 5px;
-      text-align: left;
-      h3{
-        max-width: 260px;
-        color: #1C1C1C;
-        margin-bottom: 15px;
-        span{
-          color: $peach;
-        }
-      }
-      h4{
-        margin-top: 47px;
-        font-size: 15px;
-        margin-bottom: 20px;
-      }
-      h4:last-of-type{
-        margin-top: 20px;
-        margin-bottom: 12px;
-      }
-      .input{
-        @include input;
-        opacity: 0.3;
-      }
-      label{
-        font-size: 9px;
-        font-weight: 600;
-        margin-right: 10px;
-      }
-      button{
-      @include green-button;
-      }
-      button:hover{
+
+    h1 {
+      font-size: $font-large;
+      margin: 0 2rem;
+    }
+
+    hr {
+      width: 4.6875rem;
+      border: 0.0625rem solid white;
+      margin-bottom: 1.875rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1.875rem;
+    }
+
+    button {
+      width: 8.4375rem;
+      height: 2.625rem;
+      padding: 0.625rem;
+      border: 0.125rem solid white;
+      background: transparent;
+      color: white;
+      font-family: montserrat;
+
+      &:hover {
         cursor: $pointer;
       }
     }
   }
-  
-  header::before { 
+
+  .form {
+    width: 22.5rem;
+    height: 26.5625rem;
+    padding: 1.0625rem 3.125rem;
+    background: linear-gradient(to bottom, #F5F5F5, #F5F5F5 3.5625rem, white 3.5625rem, white 22.9375rem, #41D395 3.5625rem);
+    color: #1C1C1C;
+    border-radius: 0.3125rem;
+    text-align: left;
+
+    h3 {
+      max-width: 16.25rem;
+      color: #1C1C1C;
+      margin-bottom: 0.9375rem;
+
+      span {
+        color: $peach;
+      }
+    }
+
+    h4 {
+      margin-top: 2.9375rem;
+      font-size: 0.9375rem;
+      margin-bottom: 1.25rem;
+
+      &:last-of-type {
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    .input {
+      @include input;
+      opacity: 0.3;
+    }
+
+    label {
+      font-size: 0.5625rem;
+      font-weight: 600;
+      margin-right: 0.625rem;
+    }
+
+    .get-started-btn {
+      // @include green-button; 
+
+      // &:hover {
+      //   cursor: $pointer;
+      // }
+    }
+  }
+}
+
+header::before {
   @include before;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
-  }
+}
+

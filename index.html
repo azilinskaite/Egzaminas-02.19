@@ -13,15 +13,17 @@
     <link rel="stylesheet" href="app/css/style.css" />
   </head>
   <body>
-    <nav>
+    <nav aria-label="main navigation">
       <img src="./app/images/logo.svg" alt="company-logo" />
 
       <div class="links">
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
+        <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
       </div>
 
       <i id="burger" class="fa-solid fa-bars"></i>
@@ -41,10 +43,10 @@
             out perpetual his you. Feel sold off felt nay rose met you. We so
             entreaties cultivated astonished is.
           </p>
-          <button>DOWNLOAD</button>
+          <button type="button">DOWNLOAD</button>
         </div>
 
-        <div class="form">
+        <form class="form" action="/submit-form" method="post">
           <h4>
             Try Your
             <span>FREE </span>
@@ -55,7 +57,7 @@
           <input class="input" type="text" placeholder="Last name" required />
           <input
             class="input"
-            type="text"
+            type="tel"
             placeholder="Phone number"
             required
           />
@@ -67,8 +69,8 @@
           <input type="radio" id="year" name="yearly" value="YEARLY" />
           <label for="myear">YEARLY</label>
 
-          <button type="submit">GET STARTED</button>
-        </div>
+          <button class="get-started-btn" type="submit">GET STARTED</button>
+        </form>
       </header>
 
       <section class="social">
@@ -90,12 +92,11 @@
 
       <section id="features">
         <div class="left">
-          <button onclick="showTab(event, 'register-btn')">
-            <p>REGISTER</p>
+          <button class="changing-tab-button">REGISTER
           </button>
-          <button onclick="showTab(event, 'apply-btn')"><p>APPLY</p></button>
-          <button onclick="showTab(event, 'receive-btn')">
-            <p>RECEIVE</p>
+          <button class="changing-tab-button">APPLY</button>
+          <button class="changing-tab-button">
+            RECEIVE
           </button>
         </div>
 
@@ -117,7 +118,7 @@
         </div>
 
         <div class="tabs">
-          <div class="tab block" id="pirmas">
+          <div class="tab block">
             <div class="right">
               <div class="topimages">
                 <div class="container">
@@ -341,21 +342,21 @@
       <section id="contact">
         <h2 data-aos="slide-right" data-aos-delay="100">CONTACT US</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="form">
+        <form class="form">
           <input class="input" type="text" placeholder="First name" required />
           <input class="input" type="text" placeholder="Last name" required />
           <input
             class="input"
-            type="text"
+            type="tel"
             placeholder="Phone number"
             required
           />
           <input type="radio" id="personal" name="personal" value="PERSONAL" />
-          <label for="personal">MONTHLY</label>
+          <label for="personal">PERSONAL</label>
           <input type="radio" id="company" name="company" value="COMPANY" />
           <label for="company">COMPANY</label>
           <button type="submit">SEND</button>
-        </div>
+        </form>
       </section>
     </main>
 
